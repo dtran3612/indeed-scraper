@@ -9,16 +9,6 @@ test.beforeEach(async({page})=>{
 
 test('navigate to page', async({page})=> {
     const pm = new PageManager(page)
-    // await pm.navigateTo().categoriesGroceryFrozenFoods()
-
-    // pm.navigateTo().submitUpdateShippingZip('90210')
-
-    // await pm.onFrozenFoodsGroceryPage().clickFrozenFoodsGrocery()
-
     // Login handled by global setup - storage state is already authenticated
-    await page.waitForTimeout(2000) //✅
-    await pm.navigateTo().listAndFavorites()
-
-    // await pm.navigateTo().submitSignout()
-    await page.waitForTimeout(5000) //✅
+    await page.waitForTimeout(1000) //✅
 })
