@@ -10,13 +10,11 @@ export class NavigationPage extends HelperBase{
         await this.waitForNumberOfSeconds(1) // 🚧>1?
     }
 
-    /**
-     * Login method
-     * @param username [Input][String]username
-     * @param password [Input][String]password
-     */
-    async submitSignInOrCreateAccount(username: string, password: string){
+    async submitSignInOrCreateAccount(){
+        await this.page.getByRole('link', { name: 'Sign in' }).click()
         await this.waitForNumberOfSeconds(1) // 🚧>1?
+        // const frame = this.page.frameLocator('iframe[src="https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/g/turnstile/f/ov2/av0/rch/jfdd4/0x4AAAAAAAAjq6WYeRDKmebM/light/fbE/new/normal?lang=auto"]')
+
     }
 
 
